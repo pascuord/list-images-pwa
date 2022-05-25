@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div
+    *ngIf="image"
+    class="row animate__animated animate_bounce animate_fadeIn"
+  >
+    <div class="col-md-9">
+      <p><strong>Identifier:</strong> {{ image.id }}</p>
+      <p><strong>Author:</strong> {{ image.author }}</p>
+      <p><strong>Size:</strong> {{ image.width }}</p>
+      <p><strong>Url:</strong> {{ image.url }}</p>
+      <img
+        src="{{ image.download_url }}"
+        alt=""
+        class="rounded"
+        style="width: 80%; height: 80%"
+      />
+    </div>
+    <div class="col-md-3">
+      <a routerLink="/" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
